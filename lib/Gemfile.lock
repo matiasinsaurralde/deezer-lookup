@@ -1,9 +1,11 @@
 GEM
   specs:
     damerau-levenshtein (1.0.3)
+    json (1.8.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   damerau-levenshtein
+  json
