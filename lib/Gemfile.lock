@@ -1,0 +1,9 @@
+GEM
+  specs:
+    damerau-levenshtein (1.0.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  damerau-levenshtein
