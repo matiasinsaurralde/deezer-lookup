@@ -33,6 +33,8 @@ module Deezer
       end
     end
 
+    filtered_results
+
   end
 
 end
