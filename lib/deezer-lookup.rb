@@ -1,5 +1,8 @@
 require 'damerau-levenshtein'
 require 'open-uri'
+require 'json'
+
+LEVENSHTEIN_THRESHOLDS = []
 
 module Deezer
   def self.access_token(token)
@@ -7,9 +10,8 @@ module Deezer
   end
   def self.lookup(*query)
     base_url = "http://api.deezer.com/search?access_token=#{@access_token}&q="
-    # http://api.deezer.com/search?q=#{URI.escape(_params)}&access_token=nypmrN5hry5408738ae132endQ8sQed5408738ae1369wgcn7g
     base_url += URI.escape( query.join(' ').downcase )
-    raw_html = open(base_url).read()
-    
+    raw_json = open(base_url).read()
+    data = JSON.parse(raw_json)['data']
   end
 end
